@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ftps": "^1.2.0",
-    "nodemon": "^2.0.19",
-    "ssh2-sftp-client": "^8.0.0"
+    "nodemon": "^2.0.19"
   }
 }
