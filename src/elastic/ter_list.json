@@ -1,0 +1,912 @@
+[
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "hIKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "13",
+        "remarks": "UNSC RESOLUTION 1483",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Saddam Hussein Al-Tikriti",
+        "firstName": "Saddam",
+        "lastName": "Hussein Al-Tikriti",
+        "title": "",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "19",
+              "category": "strong",
+              "fullName": "Abu Ali",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "380",
+              "category": "strong",
+              "fullName": "Abou Ali",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "1",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "14",
+              "dateOfBirth": "1937-04-28"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "14",
+              "placeOfBirth": "1937-04-28 al-Awja, near Tikrit"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "hYKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "20",
+        "remarks": "Saddam's second son",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Qoussaï Saddam Hussein Al-Tikriti",
+        "firstName": "Qoussaï",
+        "lastName": "Hussein Al-Tikriti",
+        "title": "",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "26",
+              "category": "strong",
+              "fullName": "Qusay Saddam Hussein Al-Tikriti",
+              "firstName": "Qusay",
+              "lastName": "Hussein Al-Tikriti"
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "2",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "19",
+              "dateOfBirth": "1965"
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "20",
+              "dateOfBirth": "1966"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "19",
+              "placeOfBirth": "Baghdad"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "20",
+              "placeOfBirth": "Baghdad"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "hoKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "23",
+        "remarks": "Saddam's eldest son",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Uday Saddam Hussein Al-Tikriti",
+        "firstName": "Uday",
+        "lastName": "Hussein Al-Tikriti",
+        "title": "Leader of Paramilitary Organisation Fedayeen Saddam",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "383",
+              "category": "strong",
+              "fullName": "Oudaï Saddam Hussein Al-Tikriti",
+              "firstName": "Oudaï",
+              "lastName": "Hussein Al-Tikriti"
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "4",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "23",
+              "dateOfBirth": "1964"
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "24",
+              "dateOfBirth": "1967"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "23",
+              "placeOfBirth": "Baghdad"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "24",
+              "placeOfBirth": "Baghdad"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "h4KNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "25",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Abid Hamid Mahmoud Al-Tikriti",
+        "firstName": "",
+        "lastName": "",
+        "title": "",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "386",
+              "category": "strong",
+              "fullName": "Abed Mahmoud Hammoud",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "385",
+              "category": "strong",
+              "fullName": "Abid Hamid Bid Hamid Mahmoud",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "35",
+              "category": "strong",
+              "fullName": "Abed Mahmoud Hammud",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "34",
+              "category": "strong",
+              "fullName": "Abdel Hamid Mahmoud",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "32",
+              "category": "strong",
+              "fullName": "Abid Hamid Bid Hamid Mahmud",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "31",
+              "category": "strong",
+              "fullName": "Abid Hamid Mahmud Al-Tikriti",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "5",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "28",
+              "dateOfBirth": "1957"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "28",
+              "placeOfBirth": "al-Awja, near Tikrit"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "iIKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "29",
+        "remarks": "UNSC RESOLUTION 1483 BASIS",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Ali Hassan Al-Majid Al-Tikriti",
+        "firstName": "",
+        "lastName": "",
+        "title": "Presidential Advisor and Senior Member of Revolutionary Command Council",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "40",
+              "category": "strong",
+              "fullName": "Al-Kimawi",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "6",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "160",
+              "dateOfBirth": null
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "31",
+              "dateOfBirth": "1943"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "160",
+              "placeOfBirth": "Al-Awja, near Tikrit (J.O. ES)"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "31",
+              "placeOfBirth": "al-Awja, near Tikrit"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "iYKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "33",
+        "remarks": "UNSC RESOLUTION 1483 BASIS",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Abu Ahmad",
+        "firstName": "",
+        "lastName": "",
+        "title": "Deputy Secretary, Ba'th Party Regional Command",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "244",
+              "category": "strong",
+              "fullName": "Izzat Ibrahim Al-Duri",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "51",
+              "category": "strong",
+              "fullName": "Izzat Ibrahim al-Duri",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "52",
+              "category": "strong",
+              "fullName": "Abu Brays",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "44",
+              "category": "strong",
+              "fullName": "Izzat Ibrahim al-Duri",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "45",
+              "category": "strong",
+              "fullName": "Abu Brays",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "46",
+              "category": "strong",
+              "fullName": "Abu Ahmad",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "49",
+              "category": "strong",
+              "fullName": "Izzat Ibrahim al-Duri",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "387",
+              "category": "strong",
+              "fullName": "Izzat Ibrahim al-Douri",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "55",
+              "category": "strong",
+              "fullName": "Abu Ahmad",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "54",
+              "category": "strong",
+              "fullName": "Abu Brays",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "7",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "161",
+              "dateOfBirth": null
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "33",
+              "dateOfBirth": "1942"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "161",
+              "placeOfBirth": "Al-Dur (J.O. ES)"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "33",
+              "placeOfBirth": "al-Dur"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "ioKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "39",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Hani Abd-Al-Latif Tilfah Al-Tikriti",
+        "firstName": "",
+        "lastName": "",
+        "title": "No 2 in Special Security Organisation",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "388",
+              "category": "strong",
+              "fullName": "Hani Abdel-Latif Tilfah Al-Tikriti",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "8",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "39",
+              "dateOfBirth": "1962"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "39",
+              "placeOfBirth": "al-Awja, near Tikrit"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "i4KNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "43",
+        "remarks": "UNSC RESOLUTION 1483 BASIS",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Aziz Salih al-Numan",
+        "firstName": "",
+        "lastName": "",
+        "title": "Ba'th Party Regional Command Chairman",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "390",
+              "category": "strong",
+              "fullName": "Aziz Salih al-Numan",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "245",
+              "category": "strong",
+              "fullName": "Aziz Salih Al-Numan",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "65",
+              "category": "strong",
+              "fullName": "Aziz Salih al-Numan",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "389",
+              "category": "strong",
+              "fullName": "Aziz Salih al-Nouman",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "64",
+              "category": "strong",
+              "fullName": "Aziz Salih al-Numan",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "9",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "195",
+              "dateOfBirth": null
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "41",
+              "dateOfBirth": "1941"
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "42",
+              "dateOfBirth": "1945"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "195",
+              "placeOfBirth": "Nassiriya (J.O. FR)"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "41",
+              "placeOfBirth": "An Nasiriyah"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "42",
+              "placeOfBirth": "An Nasiriyah"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "jIKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "46",
+        "remarks": "UNSC RESOLUTION 1483 BASIS",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Mohammed Hamza Zoubaïdi",
+        "firstName": "",
+        "lastName": "",
+        "title": "",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "68",
+              "category": "strong",
+              "fullName": "Muhammad Hamza Zubaidi",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "10",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "44",
+              "dateOfBirth": "1938"
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "248",
+              "dateOfBirth": null
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "44",
+              "placeOfBirth": "Babylon, Babil"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "248",
+              "placeOfBirth": "Babylone, Babil (J.O. FR)"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "_index": "sanctions_eu_202111261122",
+    "_type": "_doc",
+    "_id": "jYKNW30Bni0MD8pwk-J5",
+    "_score": 1.0,
+    "_source": {
+      "publishDate": "2021-11-25",
+      "loadDate": "2021-11-26",
+      "source": "EU",
+      "data": {
+        "uid": "50",
+        "remarks": "UNSC RESOLUTION 1483 BASIS:",
+        "programList": [
+          {
+            "program": "IRQ"
+          }
+        ],
+        "type": "Individual",
+        "fullName": "Kamal Mustafa Abdallah",
+        "firstName": "",
+        "lastName": "",
+        "title": "Led Special Republican Guards and commanded both Republican Guard Corps",
+        "akaList": [
+          {
+            "aka": {
+              "uid": "392",
+              "category": "strong",
+              "fullName": "Kamal Moustafa Abdallah",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "246",
+              "category": "strong",
+              "fullName": "Kamal Mustafa Abdallah Sultan Al-Tikriti",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "72",
+              "category": "strong",
+              "fullName": "Kamal Mustafa Abdallah",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "393",
+              "category": "strong",
+              "fullName": "Kamal Moustafa Abdallah Soultan al-Tikriti",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "74",
+              "category": "strong",
+              "fullName": "Kamal Mustafa Abdallah Sultan al-Tikriti",
+              "firstName": "",
+              "lastName": ""
+            }
+          },
+          {
+            "aka": {
+              "uid": "75",
+              "category": "strong",
+              "fullName": "Kamal Mustafa Abdallah Sultan al-Tikriti",
+              "firstName": "",
+              "lastName": ""
+            }
+          }
+        ],
+        "citizenshipList": [
+          {
+            "citizenship": {
+              "uid": "11",
+              "country": "IRAQ"
+            }
+          }
+        ],
+        "dateOfBirthList": [
+          {
+            "dateOfBirthItem": {
+              "uid": "48",
+              "dateOfBirth": "1955-05-04"
+            }
+          },
+          {
+            "dateOfBirthItem": {
+              "uid": "47",
+              "dateOfBirth": "1952"
+            }
+          }
+        ],
+        "placeOfBirthList": [
+          {
+            "placeOfBirthItem": {
+              "uid": "48",
+              "placeOfBirth": "1955-05-04 Tikrit"
+            }
+          },
+          {
+            "placeOfBirthItem": {
+              "uid": "47",
+              "placeOfBirth": "Tikrit"
+            }
+          }
+        ]
+      }
+    }
+  }
+]

@@ -10,8 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ftps": "^1.2.0",
+    "amqplib": "^0.10.0",
     "nodemon": "^2.0.19",
-    "ssh2-sftp-client": "^8.0.0"
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.0",
+    "@elastic/elasticsearch": "^8.1.0",
+    "faker": "^5.5.3",
+    "express-fileupload": "^1.3.1",
+    "jsonpath": "^1.1.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3"
   }
 }
