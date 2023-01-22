@@ -4,13 +4,16 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "redis:pipeline": "node src/redis/pipeline/index.js",
+    "redis:multi": "node src/redis/multi/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "ioredis": "^5.2.4",
     "@elastic/elasticsearch": "^8.1.0",
     "amqplib": "^0.10.0",
     "body-parser": "^1.20.0",
