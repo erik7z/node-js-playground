@@ -490,3 +490,15 @@ function childProcess() {
  *  The cluster module is the easiest and fastest way to vertically scale a simple nodejs server.
  *  For more advanced and elastic scaling, tools like docker containers and Kubernetes are used.
  */
+
+
+/**
+ * # Conclusion
+ * Even though Node js provides great support for multi-threading, that doesn't necessarily mean we should always make our web applications multi-threaded.
+ *
+ * Node js is built in such a way that the default single-threaded behavior is preferred over the multi-threaded behaviour for web-servers,
+ * because web-servers tend to be IO-bound. Nodejs is famous for handling asynchronous IO operations with minimal system resources.
+ *
+ * There are some cases where a web server does CPU bound operations and in such cases,
+ * it is really easy to spin up a worker thread or child process and delegate that task.
+ */
