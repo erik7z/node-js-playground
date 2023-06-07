@@ -3,7 +3,7 @@ const amqplib = require('amqplib');
 const queueName = "wdj";
 
 const recieveMsg = async () => {
-  const connection = await amqplib.connect('amqp://localhost');
+  const connection = await amqplib.connect('amqp://guest:guest@127.0.0.1:5673');
   const channel = await connection.createChannel();
   await channel.assertQueue(queueName, {durable: false});
   console.log(`Waiting for messages in queue: ${queueName}`);
