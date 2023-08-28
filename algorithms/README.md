@@ -12,5 +12,5 @@ sudo npm i -g jest
 jest ./algorithms/completed_exercises
 
 # run with watch of some tests
-jest ./algorithms/excercises/anagrams --watch
+jest ./algorithms/excercises/anagrams/test.js --watch
 ```
