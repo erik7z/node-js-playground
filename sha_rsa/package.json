@@ -1,0 +1,19 @@
+{
+  "name": "sha_rsa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./basic_usage.js",
+    "start:01": "node ./request_response.js",
+    "start:02": "node ./request_response_memory_key.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "openssl-smime": "^1.0.1",
+    "uuid": "^9.0.1"
+  }
+}
