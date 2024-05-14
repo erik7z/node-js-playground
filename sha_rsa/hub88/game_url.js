@@ -1,28 +1,11 @@
 const axios                      = require('axios');
 const {createSign, createVerify} = require('crypto');
+const fs                         = require('fs');
+const path                       = require('path');
 
-const OPERATOR_PRIVATE_KEY = `-----BEGIN RSA PRIVATE KEY-----
-MIICXAIBAAKBgQCJnXi4yMt/LGu86Uz2H5XKdtRQCjMuU+UAhqE6+U6Y5U8ZBeq1
-sLVrOFRMgaiX/EBbkJw7HsY37vC60gI2Iy+7rTNpuV+Tv1J0y7kVGAqzTgQWXHRU
-orlLwKz0xuoiXQZ2KfWkLZ/5oakaXkU7q5MCGpTeX/+qDOoMLyyOXIe1wwIDAQAB
-AoGAdTlQpodU4UXjmI5bYqTRIiBLBstJgcMxJVuJaAUKcK+Uy0oA/zhBsc3P8UPZ
-a24THGx4yNuUGf1NzrYp8BfVBhWPUcYRwgWeqyuIpSVQVGY/9AJ+364iBX9NQ+6A
-ATwZm855kZWFnXkOPJXAzILO7Me5Q3buzxGjoWP3k5LjEQECQQDTxmNlAVTIJ8ka
-f/5+EY4F5qmS/sonaGCR/fhF8UdIQnCgsfF0+IeijH8I16rj/7kGLTaCOwNIraWj
-h2khV/8DAkEAplp0rp3Nkt/wWR1Z2u1aQw9WKL7WbNFKtIIpCCPJwYXLXv8dTkd7
-GcGADIlx++aGzMkdP+HOoeLRuUlXoCtSQQJBALu+QRemWncnbk2j8wXoojPxDZxX
-bPgKvLIwqQ24nS0eWaLcnebI/dXJIEXCjKmcZ3dmVdCWaI7iAto6jaUV0ekCQA4F
-idg+DNnYblXUl4JQh08nt8dvbnt1mKpmXjcFbTgWovG65yl19PZSzQxBeY4V/D6+
-pOyBh/01NSA9AlnJzQECQBUIikGD2LxvcFovgQKm5/aToEJCOK2/pkeRzWmnmWQo
-TKqcJOrgEQkvC3nD+8LZDFmnfZhjXLBP95bguZAJdPk=
------END RSA PRIVATE KEY-----`;
-
-const OPERATOR_PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJnXi4yMt/LGu86Uz2H5XKdtRQ
-CjMuU+UAhqE6+U6Y5U8ZBeq1sLVrOFRMgaiX/EBbkJw7HsY37vC60gI2Iy+7rTNp
-uV+Tv1J0y7kVGAqzTgQWXHRUorlLwKz0xuoiXQZ2KfWkLZ/5oakaXkU7q5MCGpTe
-X/+qDOoMLyyOXIe1wwIDAQAB
------END PUBLIC KEY-----`;
+function readPem(filename) {
+    return fs.readFileSync(path.resolve(__dirname, './keys/' + filename)).toString('ascii');
+}
 
 function sign(message, digestType, privateKey) {
     return createSign(digestType).update(message).sign(privateKey, 'base64');
@@ -33,9 +16,25 @@ function isValid(message, signature, digestType, publicKey) {
 }
 
 async function fetchWithRsa() {
+    const OPERATOR_PRIVATE_KEY = readPem('stg_priv.pem');
+    const OPERATOR_PUBLIC_KEY  = readPem('stg_pub.pem');
 
     const reqBody = {
-        'operator_id': 1325
+        'user'          : 'john12345',
+        'token'         : 'f562a685-a160-4d17-876d-ab3363db331c',
+        'platform'      : 'GPL_DESKTOP',
+        'operator_id'   : 1325,
+        'meta'          : {
+            'rating'  : 10,
+            'oddsType': 'decimal'
+        },
+        'lobby_url'     : 'https://amazing-casino.com/lobby',
+        'lang'          : 'en',
+        'ip'            : '142.245.172.168',
+        'game_code'     : 'evo_livebaccaratlobby',
+        'deposit_url'   : 'https://amazing-casion.com/deposit',
+        'currency'      : 'EUR',
+        'country'       : 'EE'
     };
 
     const reqBodyString = JSON.stringify(reqBody);
@@ -57,7 +56,7 @@ async function fetchWithRsa() {
     `);
 
     const API_URL = 'https://api.server1.ih.testenv.io';
-    const path    = '/operator/generic/v2/game/list';
+    const path    = '/operator/generic/v2/game/url';
 
     const headers = {
         'X-Hub88-Signature': signature,
@@ -83,7 +82,7 @@ function getAxiosWithRetries(retryAfteSeconds = 10, statusCodes = [429], retryCo
     const retryAxios = axios.create();
     let retryCount   = 0;
     retryAxios.interceptors.response.use((res) => {
-        retryCount   = 0;
+        retryCount = 0;
         return res;
     }, async (error) => {
         if (error.config && statusCodes.includes(Number(error.response?.status))) {
@@ -95,10 +94,10 @@ function getAxiosWithRetries(retryAfteSeconds = 10, statusCodes = [429], retryCo
             }
             await new Promise(resolve => setTimeout(resolve, retryAfteSeconds * 1000));
             retryCount++;
-            console.log(`(${retryCount}) retrying....`)
+            console.log(`(${retryCount}) retrying....`);
             return retryAxios.request(error.config);
         }
-        retryCount   = 0;
+        retryCount = 0;
         return Promise.reject(error);
     });
     return retryAxios;
