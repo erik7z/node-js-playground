@@ -1,0 +1,19 @@
+{
+  "name": "parse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:redis:export": "node redis-to-csv.js",
+    "start:db:import": "node csv-to-db.js",
+    "start:db:import:parallel": "node csv-to-db-parallel.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "ioredis": "^5.5.0",
+    "mysql2": "^3.12.0"
+  }
+}
