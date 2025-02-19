@@ -1,53 +1,53 @@
-const Redis = require('ioredis');
-const fs = require('fs');
-const { parse } = require('csv-parse');
+const Redis   = require('ioredis');
+const fs      = require('fs');
+const {parse} = require('csv-parse');
 
-const filename = 'redis-export-redis_whitelabels_tech-16379-sorted_by_key';
+const filename  = 'redis-export-redis_whitelabels_tech-16379-sorted_by_key';
 const LOGS_PATH = '_logs';
-const DateTime = new Date().toISOString().replace(/T|:|\..+/g, '_').slice(0, -3);
-const logFile = fs.createWriteStream(`${LOGS_PATH}/delete-from-redis-${filename}-${DateTime}.log`, { flags: 'a' });
+const DateTime  = new Date().toISOString().replace(/T|:|\..+/g, '_').slice(0, -3);
+const logFile   = fs.createWriteStream(`${LOGS_PATH}/delete-from-redis-${filename}-${DateTime}.log`, {flags: 'a'});
 
 function log(message, isError = false) {
-    const timestamp = new Date().toISOString();
+    const timestamp  = new Date().toISOString();
     const logMessage = `[${timestamp}] ${isError ? 'ERROR: ' : ''}${message}\n`;
     console.log(logMessage);
     logFile.write(logMessage);
 }
 
 const redis = new Redis({
-    host: 'redis.whitelabels.tech',
-    port: 16379,
+    host         : 'redis.whitelabels.tech',
+    port         : 16379,
     retryStrategy: (times) => Math.min(times * 10, 1000)
 });
 
+const BATCH_SIZE = 100;
+
 async function deleteKeysFromCSV() {
     const fileStream = fs.createReadStream(`_for_import/${filename}.csv`);
-    const parser = fileStream.pipe(parse({
-        columns: true,
+    const parser     = fileStream.pipe(parse({
+        columns         : true,
         skip_empty_lines: true
     }));
 
     let totalDeleted = 0;
-    const startTime = Date.now();
+    const startTime  = Date.now();
+    let batch        = [];
 
     try {
         for await (const record of parser) {
             const key = record.key;
+            batch.push(key);
 
-            const redis_record = await redis.get(key);
-
-            if (!redis_record) {
-                log(`Key not found: ${key}`);
-                continue;
+            if (batch.length >= BATCH_SIZE) {
+                await deleteBatch(batch);
+                totalDeleted += batch.length;
+                batch = [];
             }
+        }
 
-            const result = await redis.del(key);
-            if (result === 1) {
-                totalDeleted++;
-                log(`Deleted key: ${key}`);
-            } else {
-                log(`Key not found or already deleted: ${key}`);
-            }
+        if (batch.length > 0) {
+            await deleteBatch(batch);
+            totalDeleted += batch.length;
         }
 
         const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
@@ -58,6 +58,22 @@ async function deleteKeysFromCSV() {
     } finally {
         await redis.quit();
     }
+}
+
+async function deleteBatch(keys) {
+    const pipeline = redis.pipeline();
+    keys.forEach(key => pipeline.del(key));
+    const results = await pipeline.exec();
+
+    results.forEach(([error, result], index) => {
+        if (error) {
+            log(`Error deleting key ${keys[index]}: ${error.message}`, true);
+        } else if (result === 1) {
+            log(`Deleted key: ${keys[index]}`);
+        } else {
+            log(`Key not found or already deleted: ${keys[index]}`);
+        }
+    });
 }
 
 deleteKeysFromCSV();
