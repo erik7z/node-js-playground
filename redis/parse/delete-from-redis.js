@@ -3,6 +3,7 @@ const fs      = require('fs');
 const {parse} = require('csv-parse');
 
 const filename  = 'redis-export-redis_whitelabels_tech-16379-sorted_by_key';
+const filePath  = `_for_import/${filename}.csv`;
 const LOGS_PATH = '_logs';
 const DateTime  = new Date().toISOString().replace(/T|:|\..+/g, '_').slice(0, -3);
 const logFile   = fs.createWriteStream(`${LOGS_PATH}/delete-from-redis-${filename}-${DateTime}.log`, {flags: 'a'});
@@ -22,25 +23,45 @@ const redis = new Redis({
 
 const BATCH_SIZE = 100;
 
+async function countTotalRecords(filename) {
+    return new Promise((resolve) => {
+        let count         = 0;
+        const countStream = fs.createReadStream(filePath);
+        const parser      = countStream.pipe(parse({columns: true}));
+        parser.on('data', () => count++);
+        parser.on('end', () => resolve(count));
+    });
+}
 async function deleteKeysFromCSV() {
-    const fileStream = fs.createReadStream(`_for_import/${filename}.csv`);
+    const totalRecords = await countTotalRecords(filename);
+    log(`Starting deletion of ${totalRecords} records`);
+
+    const fileStream = fs.createReadStream(filePath);
     const parser     = fileStream.pipe(parse({
         columns         : true,
         skip_empty_lines: true
     }));
 
-    let totalDeleted = 0;
-    const startTime  = Date.now();
-    let batch        = [];
+    let totalDeleted   = 0;
+    let totalProcessed = 0;
+    const startTime    = Date.now();
+    let batch          = [];
 
     try {
         for await (const record of parser) {
             const key = record.key;
             batch.push(key);
+            totalProcessed++;
 
             if (batch.length >= BATCH_SIZE) {
                 await deleteBatch(batch);
                 totalDeleted += batch.length;
+
+                // Log progress after each batch
+                const percent        = ((totalProcessed / totalRecords) * 100).toFixed(2);
+                const elapsedSeconds = ((Date.now() - startTime) / 1000).toFixed(1);
+                log(`Progress: ${totalProcessed}/${totalRecords} (${percent}%) | Elapsed time: ${elapsedSeconds}s`);
+
                 batch = [];
             }
         }
@@ -51,7 +72,7 @@ async function deleteKeysFromCSV() {
         }
 
         const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
-        log(`Deletion completed successfully! Deleted ${totalDeleted} keys in ${totalTime} seconds`);
+        log(`Deletion completed successfully! Deleted ${totalDeleted}/${totalRecords} keys in ${totalTime} seconds`);
     } catch (error) {
         log(`Error during deletion: ${error.message}`, true);
         process.exit(1);
