@@ -6,6 +6,7 @@
   "scripts": {
     "start:redis:export": "node redis-to-csv.js",
     "start:db:import": "node csv-to-db.js",
+    "start:redis:delete": "node delete-from-redis.js",
     "start:db:import:parallel": "node csv-to-db-parallel.js"
   },
   "keywords": [],
