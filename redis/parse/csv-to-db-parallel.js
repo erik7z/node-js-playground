@@ -10,8 +10,8 @@ const IMPORT_FILE_NAME         = 'redis-export-redis_advabet_com-6379-2025-02-27
 // const IMPORT_FILE_NAME      = 'test';
 const IMPORT_FILE_EXTENSION    = 'csv';
 
-const WORKER_COUNT             = 20;
-const BATCH_SIZE               = 1000;
+const WORKER_COUNT             = 60;
+const BATCH_SIZE               = 10000;
 const MONITORING_CHECK_TIMEOUT = 5000;
 
 

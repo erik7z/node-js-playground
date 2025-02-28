@@ -2,7 +2,7 @@ const Redis   = require('ioredis');
 const fs      = require('fs');
 const {parse} = require('csv-parse');
 
-const filename  = 'redis-export-redis_whitelabels_tech-16379-sorted_by_key';
+const filename  = 'redis-export-redis_advabet_com-6379-2025-02-27_08_54_sorted';
 const filePath  = `_for_import/${filename}.csv`;
 const LOGS_PATH = '_logs';
 const DateTime  = new Date().toISOString().replace(/T|:|\..+/g, '_').slice(0, -3);
@@ -16,12 +16,12 @@ function log(message, isError = false) {
 }
 
 const redis = new Redis({
-    host         : 'redis.whitelabels.tech',
-    port         : 16379,
+    host         : 'redis.advabet.com',
+    port         : 6379,
     retryStrategy: (times) => Math.min(times * 10, 1000)
 });
 
-const BATCH_SIZE = 100;
+const BATCH_SIZE = 1000;
 
 async function countTotalRecords(filename) {
     return new Promise((resolve) => {
