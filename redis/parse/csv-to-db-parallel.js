@@ -6,7 +6,7 @@ const {Worker, isMainThread, workerData} = require('worker_threads');
 
 const LOGS_PATH                    = '_logs';
 const IMPORT_FILE_PATH         = '_for_import';
-const IMPORT_FILE_NAME         = 'redis-export-redis_whitelabels_tech-16379-sorted_by_key';
+const IMPORT_FILE_NAME         = 'redis-export-redis_advabet_com-6379-2025-02-27_08_54_sorted';
 // const IMPORT_FILE_NAME      = 'test';
 const IMPORT_FILE_EXTENSION    = 'csv';
 
@@ -18,11 +18,11 @@ const MONITORING_CHECK_TIMEOUT = 5000;
 const REDIS_PENDING_JOBS_KEY   = 'pending_jobs';
 const REDIS_PROCESSED_JOBS_KEY = 'processed_events';
 
-const REDIS_HOST = 'redis.whitelabels.tech';
+const REDIS_HOST = 'redis.advabet.com';
 const REDIS_PORT = 6379;
 
 const dbConfig = {
-    host    : 'db-master.whitelabels.tech',
+    host    : 'db01.advabet.com',
     user    : 'nguita.e',
     password: 'Fjy3J&tgl6Hblhys',
     database: 'Grantor',
